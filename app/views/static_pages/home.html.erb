@@ -1,9 +1,13 @@
 <div class="center jumbotron">
   <% provide(:title, "Home") %>
   <h1>Welcome to Hero App!</h1>
-
-    <h2>This is the home page for the HeroApp</h2>
-
-
-  <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+  <br>
+  <br>
+  <br>
+  <% if !logged_in? %>
+  <%= link_to "Log in", login_path, class: "btn btn-lg btn-primary" %>
+  <br>
+  <br>
+  <%= link_to "New user", signup_path, class: "btn btn-lg btn-primary" %>
+  <% end %>
 </div>
